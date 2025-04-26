@@ -28,3 +28,5 @@ jobs:
           git add .
           git commit -m 'New menu detected'
           git push
+          echo "[New menu]($(cat url.txt))" >> $GITHUB_STEP_SUMMARY
+          exit 1
