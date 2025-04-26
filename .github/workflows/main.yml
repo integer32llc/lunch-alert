@@ -1,0 +1,7 @@
+name: Check for a new lunch menu
+on:
+  push
+jobs:
+  Check:
+    steps:
+      - run: ./run.sh
