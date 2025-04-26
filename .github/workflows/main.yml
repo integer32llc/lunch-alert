@@ -3,5 +3,6 @@ on:
   push
 jobs:
   Check:
+    runs-on: ubuntu-latest
     steps:
       - run: ./run.sh
