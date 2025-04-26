@@ -15,13 +15,13 @@ jobs:
         run: |
           if [[ -n "$(git diff --exit-code)" ]]; then
             echo "Changes detected."
-            echo "::set-output name=has_changes::true"
+            echo "HAS_CHANGES=true" >> $GITHUB_ENV
           else
             echo "No changes detected."
-            echo "::set-output name=has_changes::false"
+            echo "HAS_CHANGES=false" >> $GITHUB_ENV
           fi
       - name: Commit and Push Changes
-        if: steps.check_changes.outputs.has_changes == 'true'
+        if: ${{ env.HAS_CHANGES == 'true' }}
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
