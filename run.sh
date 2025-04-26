@@ -2,7 +2,7 @@
 
 set -eu -o pipefail
 
-curl "https://www.pghschools.org/departments/food-services/school-menus/site-kitchen" | \
+curl -s "https://www.pghschools.org/departments/food-services/school-menus/site-kitchen" | \
 xmllint \
   --html \
   --xpath "concat('https://www.pghschools.org', string(//main//a/@href))" \
