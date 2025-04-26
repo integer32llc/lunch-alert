@@ -7,4 +7,6 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
+      - name: Install xmllint
+        run: sudo apt-get install --no-install-recommends -y libxml2-utils
       - run: ./run.sh
