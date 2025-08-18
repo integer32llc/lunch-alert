@@ -8,8 +8,6 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Install xmllint
-        run: sudo apt-get install --no-install-recommends -y libxml2-utils
       - run: ./run.sh
       - name: Check for Changes
         id: check_changes
@@ -29,5 +27,5 @@ jobs:
           git add .
           git commit -m 'New menu detected'
           git push
-          echo "[New menu]($(cat url.txt))" >> $GITHUB_STEP_SUMMARY
+          cat url.txt >> $GITHUB_STEP_SUMMARY
           exit 1

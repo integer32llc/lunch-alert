@@ -1,7 +1,9 @@
 use scraper::{Html, Selector};
+use std::io;
 
 fn main() {
-    let html = std::fs::read_to_string("2025-08-17.html").unwrap();
+    let stdin = io::stdin();
+    let html = io::read_to_string(stdin).unwrap();
     let doc = Html::parse_document(&html);
     let selector = Selector::parse("main a").unwrap();
     let mut smoosh: Vec<(String, String)> = Vec::new();
