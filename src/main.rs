@@ -9,10 +9,11 @@ fn main() {
     let mut smoosh: Vec<(String, String)> = Vec::new();
 
     for element in doc.select(&selector) {
-        smoosh.push((
-            element.value().attr("href").unwrap().into(),
-            element.value().attr("data-file-name").unwrap().into(),
-        ));
+        if let Some(href) = element.value().attr("href")
+            && let Some(file_name) = element.value().attr("data-file-name")
+        {
+            smoosh.push((href.into(), file_name.into()));
+        }
     }
 
     smoosh.dedup();
