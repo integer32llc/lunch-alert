@@ -1,3 +1,3 @@
-SiteKitchenMenu-BacktoSchoolMenu2026.pdf: https://www.pghschools.org/fs/resource-manager/view/1cedb282-cc64-41a6-afae-be566d96f6f8
+SKOctober26.pdf: https://www.pghschools.org/fs/resource-manager/view/aeffb9a8-c4be-488a-9814-568f534d5279
 SKSeptember26.pdf: https://www.pghschools.org/fs/resource-manager/view/090946ea-3d09-448f-a440-6c1ef09ed9d2
 SK_June_26-ARABIC.pdf: https://www.pghschools.org/fs/resource-manager/view/e863f524-156d-45c3-8482-7521a9b4f781
